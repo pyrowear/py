@@ -1,27 +1,24 @@
-# PYRO WEAR — Landing Page Maroc (COD + WhatsApp) — Vercel
+# NAFRICA TV PROD — Site vitrine (Next.js + Vercel)
 
-## Installation
+## 1) Installation
 ```bash
 npm install
 npm run dev
 ```
-Ouvre http://localhost:3000
+Ouvrir http://localhost:3000
 
-## Configuration (.env)
-Copie `.env.example` → `.env` puis remplis :
-- NEXT_PUBLIC_WHATSAPP_NUMBER (ex: 212669727973)
-- Pixels Meta / TikTok / GA4 (optionnel)
+## 2) Modifier les infos (important)
+- Téléphone WhatsApp : remplacer `+212600000000` dans :
+  - `components/Footer.tsx`
+  - `app/contact/page.tsx`
+- Email : remplacez si besoin `contact@nafricatvprod.com`
 
-## Déploiement Vercel
-1) Push sur GitHub
-2) Import sur Vercel
-3) Ajoute les variables d’environnement sur Vercel (Settings → Environment Variables)
-4) Deploy
+## 3) Déploiement sur Vercel
+1. Poussez le projet sur GitHub
+2. Importez sur Vercel
+3. Ajoutez le domaine `nafricatvprod.com`
 
-## Images
-Remplace `public/puffer/1.jpg..6.jpg` par tes photos.
-
-
-## Pages ajoutées
-- /merci : page de remerciement après l'envoi WhatsApp
-- /admin : dashboard simple (PIN via NEXT_PUBLIC_ADMIN_PIN)
+## 4) SEO
+- `app/sitemap.ts` génère automatiquement `/sitemap.xml`
+- `app/robots.ts` génère automatiquement `/robots.txt`
+- `app/layout.tsx` contient OpenGraph + metadata globale
